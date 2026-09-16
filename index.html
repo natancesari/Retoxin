@@ -1,10 +1,99 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
+    <!-- 1. Metas de Performance e Técnicas -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retoxin - Naturalny Detoks i Odporność Organizmu</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="no-referrer-when-downgrade">
     
+    <!-- 2. Preconnect para Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- 3. SEO Ultra-Neutro (Estratégia Cega: Apenas Marca e Compra) -->
+    <title>Retoxin Polska</title>
+    <meta name="description" content="Retoxin w Polsce. Sprawdź oficjalne informacje, cenę i zamów z płatnością przy odbiorze. Szybka i bezpieczna dostawa.">
+    <meta name="keywords" content="Retoxin, Retoxin Polska, cena Retoxin, opinie Retoxin, kupić Retoxin, Retoxin oficjalna strona, zamówienie Retoxin">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    <!-- 4. Canonical e Hreflang (Sinalizando o idioma Polonês) -->
+    <link rel="canonical" href="https://retoxin.vercel.app/">
+    <link rel="alternate" hreflang="pl-PL" href="https://retoxin.vercel.app/">
+    <link rel="alternate" hreflang="x-default" href="https://retoxin.vercel.app/">
+
+    <!-- 5. Metas de Entrega -->
+    <meta name="delivery-time" content="2-5 days">
+
+    <!-- 6. Open Graph (Visual Neutro para Redes Sociais) -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="Retoxin Polska - Zamówienie">
+    <meta property="og:description" content="Zamów Retoxin z płatnością przy odbiorze. Oryginalny produkt.">
+    <meta property="og:url" content="https://retoxin.vercel.app/">
+    <meta property="og:image" content="https://retoxin.vercel.app/retoxin.png">
+    <meta property="og:image:alt" content="Retoxin">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="Retoxin">
+    <meta property="product:price:amount" content="147.00">
+    <meta property="product:price:currency" content="PLN">
+
+    <!-- 7. JSON-LD Completo (Focado apenas w E-commerce) -->
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "Retoxin",
+            "image": "https://retoxin.vercel.app/retoxin.png",
+            "description": "Oryginalny produkt Retoxin dostępny w Polsce.",
+            "sku": "RTX-PL-01",
+            "brand": {
+                "@type": "Brand",
+                "name": "Retoxin"
+            },
+            "offers": {
+                "@type": "Offer",
+                "url": "https://retoxin.vercel.app/",
+                "priceCurrency": "PLN",
+                "price": "147.00",
+                "itemCondition": "https://schema.org/NewCondition",
+                "availability": "https://schema.org/InStock",
+                "seller": {
+                    "@type": "Organization",
+                    "name": "Retoxin Polska"
+                },
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": "0.00",
+                        "currency": "PLN"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 2,
+                            "maxValue": 5,
+                            "unitCode": "d"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+    </script>
+    
+    <!-- 8. Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "yjbl7fbfez");
+    </script>
+
+    <!-- 9. Estilos CSS -->
     <style>
         /* PALETA DE CORES: Extraída da nova página oficial (Verde/Laranja) */
         :root {
@@ -516,7 +605,7 @@
         
         function closeModal(id) {
             document.getElementById(id).style.display = 'none';
-            // Só libera o scroll se o cookie overlay também estiver fechado
+            // Só libera o scroll se o cookie overlay też estiver fechado
             if(document.getElementById('cookie-banner-overlay').style.display === 'none') {
                 document.body.style.overflow = 'auto'; 
             }
