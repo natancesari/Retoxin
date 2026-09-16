@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retoxin - Naturalny Detoks i Odporność Organizmu</title>
+    
+    <style>
+        /* PALETA DE CORES: Extraída da nova página oficial (Verde/Laranja) */
+        :root {
+            --primary-green: #18863A; 
+            --accent-orange: #FF7B00; 
+            --bg-light: #F4FCF6; 
+            --text-dark: #212529;
+            --text-gray: #495057;
+            --border-light: #D1E7DD;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 16px;
+            overflow: hidden; /* Trava a rolagem por causa do cookie híbrido */
+        }
+
+        .page-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 25px rgba(0,0,0,0.05);
+        }
+
+        header {
+            background-color: var(--primary-green);
+            text-align: center;
+            padding: 20px;
+            border-bottom: 4px solid var(--accent-orange);
+        }
+
+        .logo-text {
+            font-size: 36px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        main { padding: 40px 30px; }
+
+        h1 {
+            color: var(--primary-green);
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--primary-green);
+            font-size: 24px;
+            font-weight: 700;
+            margin: 45px 0 20px 0;
+            border-bottom: 2px solid var(--accent-orange);
+            padding-bottom: 12px;
+            display: inline-block;
+        }
+
+        p { margin-bottom: 22px; color: var(--text-gray); }
+
+        .image-container {
+            margin: 35px 0;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        }
+
+        .image-caption {
+            font-size: 13px;
+            color: #888;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .benefits-list {
+            background-color: #F8FFF9; 
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 6px solid var(--primary-green);
+            margin-bottom: 35px;
+            border: 1px solid var(--border-light);
+        }
+
+        .benefits-list h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .benefits-list ul { list-style-type: none; }
+
+        .benefits-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .benefits-list li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+
+        .offer-box {
+            background-color: var(--primary-green);
+            text-align: center;
+            padding: 40px 25px;
+            border-radius: 16px;
+            border: 2px solid var(--accent-orange);
+            margin: 20px 0 50px 0; /* Ajustado para o topo */
+            color: #ffffff;
+        }
+
+        .offer-box h3 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .price-discount {
+            background-color: var(--accent-orange); 
+            color: #ffffff;
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            font-size: 18px;
+            color: #A3D2B5;
+            display: block;
+        }
+
+        .price-new {
+            font-size: 46px;
+            font-weight: 900;
+            color: #ffffff; 
+            line-height: 1;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .cta-button {
+            display: inline-block;
+            width: 100%;
+            max-width: 380px;
+            background-color: var(--accent-orange);
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 900;
+            text-decoration: none;
+            padding: 20px 20px;
+            border-radius: 8px;
+            text-align: center;
+            text-transform: uppercase;
+            box-shadow: 0 8px 25px rgba(255, 123, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #E66A00;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 123, 0, 0.5);
+        }
+
+        .cod-notice {
+            font-size: 15px;
+            margin-top: 20px;
+            display: block;
+            color: #E8F5E9;
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: var(--primary-green);
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #ffffff;
+            border-top: 1px solid #146B2E;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--accent-orange); }
+
+        /* ========================================================
+           CÓDIGO DO BANNER DE COOKIES (FUNIL HÍBRIDO)
+           ======================================================== */
+        #cookie-banner-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5); 
+            backdrop-filter: blur(8px); 
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .cookie-box {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+            text-align: center;
+            border: 1px solid var(--border-light);
+        }
+
+        .cookie-box h3 {
+            color: var(--primary-green);
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .cookie-box p {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-accept {
+            background-color: var(--primary-green);
+            color: #ffffff;
+            border: none;
+            padding: 14px 20px;
+            border-radius: 8px;
+            font-weight: 800;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-accept:hover { background-color: #146B2E; }
+
+        .btn-reject {
+            background-color: transparent;
+            color: #888888;
+            border: 1px solid #CCCCCC;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-reject:hover {
+            background-color: var(--bg-light);
+            color: var(--primary-green);
+        }
+
+        /* ========================================================
+           CÓDIGO DOS MODAIS LEGAIS (POP-UPS)
+           ======================================================== */
+        .modal-overlay {
+            display: none; 
+            position: fixed;
+            z-index: 100000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            opacity: 0;
+            animation: fadeIn 0.3s forwards;
+        }
+
+        @keyframes fadeIn { to { opacity: 1; } }
+
+        .modal-content {
+            background-color: #ffffff;
+            padding: 35px 30px;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 500px;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            text-align: left;
+            color: var(--text-dark);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+        }
+
+        .modal-content h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-size: 24px;
+            border-bottom: 2px solid var(--accent-orange);
+            padding-bottom: 12px;
+            display: inline-block;
+        }
+
+        .modal-content p {
+            font-size: 15px;
+            margin-bottom: 15px;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #CBD5E1;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .close-btn:hover { color: var(--accent-orange); }
+
+        @media (max-width: 600px) {
+            main { padding: 30px 20px; }
+            h1 { font-size: 28px; }
+            .price-new { font-size: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- OVERLAY DO COOKIE (FUNIL HÍBRIDO) -->
+    <div id="cookie-banner-overlay">
+        <div class="cookie-box">
+            <h3>Szanujemy Twoją prywatność</h3>
+            <p>Używamy plików cookie i podobnych technologii, aby spersonalizować treści, dopasować i mierzyć skuteczność reklam oraz zapewnić bezpieczne korzystanie z naszej witryny. Klikając „Akceptuj wszystko”, wyrażasz zgodę na użycie plików cookie.</p>
+            
+            <div class="cookie-buttons">
+                <!-- Rota 1 (Impulsivo): O botão ACEITAR leva para a página oficial do Retoxin -->
+                <button class="btn-accept" onclick="acceptAndRedirect()">AKCEPTUJ WSZYSTKO</button>
+                
+                <!-- Rota 2 (Cauteloso): O botão RECUSAR fecha o modal i mostra a Pre-sell Verde -->
+                <button class="btn-reject" onclick="rejectAndRead()">TYLKO NIEZBĘDNE</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <header>
+            <div class="logo-text">RETOXIN</div>
+        </header>
+
+        <main>
+            <!-- Copy otimizada para "Imunidade e Saúde Natural" -->
+            <h1>Sekret Twojej odporności i naturalne oczyszczanie organizmu</h1>
+
+            <div class="image-container">
+                <img src="retoxin.png" alt="Oryginalne opakowanie Retoxin">
+                <div class="image-caption">Naturalna siła z ekstraktów roślinnych.</div>
+            </div>
+
+            <!-- CAIXA DE OFERTA ACIMA DA DOBRA -->
+            <div class="offer-box">
+                <div class="price-discount">OSZCZĘDZASZ 50% DZISIAJ!</div>
+                <h3>Zacznij dbać o swoją odporność już dziś</h3>
+                <span class="price-old">Stara cena: 294 PLN</span>
+                <span class="price-new">147 PLN</span>
+                
+                <a href="https://86ylo.doctoradmad.com/l/?sub1=organico" rel="nofollow sponsored" class="cta-button">ZAMÓW TERAZ I ZAPŁAĆ PRZY ODBIORZE</a>
+                
+                <span class="cod-notice">🚚 Szybka dostawa na terenie całej Polski. 100% bezpiecznych zakupów.</span>
+            </div>
+            
+            <p>W dzisiejszym szybkim świecie nasze ciała są stale narażone na przetworzoną żywność, zanieczyszczenia i stres. Poczucie ciągłego zmęczenia, osłabiona odporność i dyskomfort trawienny to sygnały, że Twój organizm potrzebuje naturalnego wsparcia.</p>
+            <p><strong>Retoxin</strong> to innowacyjna, w 100% naturalna formuła opracowana w celu wsparcia procesów detoksykacji organizmu, przywracając harmonię, witalność i wzmacniając Twoją odporność każdego dnia.</p>
+
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2>Jak działa Retoxin?</h2>
+            </div>
+            <p>Sekret Retoxin leży w starannie wyselekcjonowanej kompozycji naturalnych ekstraktów. Składniki te działają synergistycznie, pomagając usunąć szkodliwe substancje z organizmu, jednocześnie wspierając regenerację i prawidłowe funkcjonowanie układu pokarmowego.</p>
+            <p>Regularne stosowanie stymuluje procesy trawienne, co bezpośrednio przekłada się na lepsze samopoczucie, promienną skórę i silniejszą barierę ochronną (odporność) przed czynnikami zewnętrznymi.</p>
+
+            <div class="benefits-list">
+                <h3>Co cechuje Retoxin:</h3>
+                <ul>
+                    <li><strong>Wsparcie Odporności:</strong> Pomaga wzmocnić naturalną barierę ochronną organizmu.</li>
+                    <li><strong>Lepsze Trawienie:</strong> Stymuluje procesy trawienne i redukuje uczucie ciężkości.</li>
+                    <li><strong>Więcej Witalności:</strong> Kompleksowe działanie przywracające energię.</li>
+                    <li><strong>100% Naturalny:</strong> Bezpieczna formuła roślinna.</li>
+                </ul>
+            </div>
+
+            <div class="image-container">
+                <img src="retoxin-lifestyle.jpg" alt="Zdrowa i pełna energii osoba w Polsce">
+            </div>
+
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2>Eksperckie podejście do zdrowia</h2>
+            </div>
+            <p>Specjaliści są zgodni: profilaktyka i regularne oczyszczanie organizmu to podstawa długotrwałego zdrowia. Retoxin oferuje bezpieczne wsparcie, stanowiąc doskonałe uzupełnienie zbilansowanej diety i aktywnego trybu życia.</p>
+
+            <div class="image-container">
+                <img src="retoxin-especialista.jpg" alt="Ekspert polecający naturalne wsparcie">
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a onclick="openModal('modal-terms')">Regulamin</a>
+                <a onclick="openModal('modal-privacy')">Polityka prywatności</a>
+                <a onclick="openModal('modal-contact')">Kontakt</a>
+            </div>
+            <p>Retoxin &copy; 2026. Wszelkie prawa zastrzeżone.</p>
+        </footer>
+    </div>
+
+    <!-- ESTRUTURA DOS MODAIS OCULTOS -->
+    <div id="modal-terms" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-terms')">&times;</span>
+            <h3>Regulamin</h3>
+            <p>Korzystanie z tej strony internetowej i zamawianie produktów za jej pośrednictwem podlega niniejszemu regulaminowi. Ta strona pełni funkcję portalu informacyjnego i łącza do oficjalnego dystrybutora w Polsce.</p>
+            <p>Metodą płatności jest "Płatność przy odbiorze", co oznacza, że użytkownik zgadza się zapłacić całą kwotę w gotówce przy odbiorze przesyłki.</p>
+        </div>
+    </div>
+
+    <div id="modal-privacy" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-privacy')">&times;</span>
+            <h3>Polityka prywatności</h3>
+            <p>Głęboko szanujemy Twoją prywatność. Na tej stronie informacyjnej nie zbieramy danych osobowych, finansowych ani numerów kart kredytowych.</p>
+            <p>Wszelkie informacje dotyczące wysyłki podane w formularzu na oficjalnej stronie internetowej będą wykorzystywane wyłącznie w celach logistycznych i do dostarczenia zamówienia.</p>
+        </div>
+    </div>
+
+    <div id="modal-contact" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-contact')">&times;</span>
+            <h3>Obsługa Klienta</h3>
+            <p>Jeśli masz pytania dotyczące statusu przesyłki, zalecamy skontaktowanie się z operatorem logistycznym, gdy zadzwoni w celu potwierdzenia dostawy.</p>
+            <p>W przypadku ogólnych pytań dotyczących tej strony, możesz napisać do nas na adres:</p>
+            <a href="mailto:suportegeralnutra@gmail.com" style="display:inline-block; background:var(--bg-light); padding:10px 15px; border-radius:8px; font-weight:bold; color:var(--primary-green); text-decoration:none; margin-top:10px; border: 1px solid var(--border-light);">suportegeralnutra@gmail.com</a>
+        </div>
+    </div>
+
+    <!-- SCRIPTS (COOKIE HÍBRIDO + MODAIS) -->
+    <script>
+        // --- Lógica do Funil Híbrido ---
+        function acceptAndRedirect() {
+            window.location.href = 'https://86ylo.doctoradmad.com/l/?sub1=organico'; 
+        }
+
+        function rejectAndRead() {
+            document.getElementById('cookie-banner-overlay').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Libera o scroll da Pre-Sell
+        }
+
+        // --- Lógica dos Modais Legais ---
+        function openModal(id) {
+            document.getElementById(id).style.display = 'flex';
+            document.body.style.overflow = 'hidden'; 
+        }
+        
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+            // Só libera o scroll se o cookie overlay também estiver fechado
+            if(document.getElementById('cookie-banner-overlay').style.display === 'none') {
+                document.body.style.overflow = 'auto'; 
+            }
+        }
+        
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal-overlay')) {
+                event.target.style.display = "none";
+                if(document.getElementById('cookie-banner-overlay').style.display === 'none') {
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
